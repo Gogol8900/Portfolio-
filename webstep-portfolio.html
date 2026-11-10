@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>WEBSTEP — лендинги и сайты-визитки</title>
+<meta name="description" content="Делаю лендинги и сайты-визитки: адаптивная вёрстка, аккуратный код, понятная структура.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#0f1320; --surface:#171d2e; --line:#28304a;
+  --text:#eceff7; --muted:#98a2bd; --accent:#7c9cff; --warm:#ffb86b;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.6 Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.logo{font:700 18px Unbounded,Manrope,sans-serif;text-decoration:none;letter-spacing:.02em}
+.logo b{color:var(--accent)}
+nav a{color:var(--muted);text-decoration:none;margin-left:20px;font-size:15px}
+nav a:hover{color:var(--text)}
+h1,h2{font-family:Unbounded,Manrope,sans-serif;font-weight:700;line-height:1.15;margin:0}
+.hero{display:grid;gap:40px;padding:48px 0 72px;align-items:center}
+.hero h1{font-size:clamp(28px,6vw,48px)}
+.hero p{color:var(--muted);max-width:52ch;margin:20px 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:13px 22px;border-radius:10px;text-decoration:none;font-weight:700;font-size:16px;border:1px solid var(--line)}
+.btn.main{background:var(--accent);color:#0f1320;border-color:var(--accent)}
+.btn:hover{border-color:var(--accent)}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--warm);outline-offset:3px}
+.browser{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.bar{display:flex;gap:6px;padding:12px 14px;border-bottom:1px solid var(--line)}
+.bar i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.page{padding:20px;display:grid;gap:12px}
+.page .h{height:18px;width:70%;background:var(--text);border-radius:4px;opacity:.9}
+.page .t{height:8px;border-radius:4px;background:var(--line)}
+.page .t.s{width:55%}
+.page .b{height:30px;width:120px;border-radius:8px;background:var(--warm);margin-top:6px}
+.page .row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
+.page .row span{height:56px;border-radius:8px;background:var(--line)}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(22px,4vw,30px);margin-bottom:28px}
+.list{display:grid}
+.item{display:grid;gap:4px;padding:18px 0;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:0}
+.item strong{font-size:18px}
+.item span{color:var(--muted)}
+.stack{display:flex;flex-wrap:wrap;gap:10px}
+.stack span{padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:var(--surface)}
+.steps{counter-reset:s;display:grid;gap:0}
+.step{display:grid;grid-template-columns:40px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
+.step:last-child{border-bottom:0}
+.step::before{counter-increment:s;content:counter(s);color:var(--accent);font:700 20px Unbounded,sans-serif}
+.step strong{display:block}
+.step span{color:var(--muted)}
+.works{display:grid;gap:16px}
+.work{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px}
+.work h3{margin:0 0 6px;font-size:19px}
+.work p{margin:0 0 14px;color:var(--muted)}
+.work small{color:var(--warm);font-size:14px}
+.contact p{color:var(--muted);max-width:52ch;margin:0 0 24px}
+footer{padding:28px 0 36px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+@media(min-width:760px){
+  .hero{grid-template-columns:1.15fr .85fr}
+  .works{grid-template-columns:repeat(3,1fr)}
+  .item{grid-template-columns:260px 1fr;gap:24px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="#top">WEB<b>STEP</b></a>
+    <nav><a href="#services">Услуги</a><a href="#works">Работы</a><a href="#contact">Контакты</a></nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <h1>Лендинги и сайты-визитки, которые понятны с первого экрана</h1>
+        <p>Я делаю адаптивные сайты для небольшого бизнеса и частных специалистов. Аккуратный код, быстрая загрузка и структура, в которой посетитель сразу видит, что вы предлагаете и как с вами связаться.</p>
+        <div class="btns">
+          <a class="btn main" href="https://t.me/Gidi_i" target="_blank" rel="noopener">Написать в Telegram</a>
+          <a class="btn" href="#works">Смотреть работы</a>
+        </div>
+      </div>
+      <div class="browser" aria-hidden="true">
+        <div class="bar"><i></i><i></i><i></i></div>
+        <div class="page">
+          <div class="h"></div><div class="t"></div><div class="t s"></div><div class="b"></div>
+          <div class="row"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </div>
+
+    <section id="services">
+      <h2>Что я делаю</h2>
+      <div class="list">
+        <div class="item"><strong>Лендинг</strong><span>Одна страница под одну задачу: собрать заявки, продать товар или представить услугу.</span></div>
+        <div class="item"><strong>Сайт-визитка</strong><span>Несколько разделов о вас: услуги, примеры работ, контакты.</span></div>
+        <div class="item"><strong>Адаптивная вёрстка</strong><span>Страница одинаково удобна на телефоне, планшете и компьютере. Вёрстка по готовому макету тоже подойдёт.</span></div>
+        <div class="item"><strong>Доработка сайта</strong><span>Правки, новые блоки, формы обратной связи на уже готовом сайте.</span></div>
+      </div>
+    </section>
+
+    <section id="stack">
+      <h2>С чем работаю</h2>
+      <div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span></div>
+    </section>
+
+    <section id="process">
+      <h2>Как проходит работа</h2>
+      <div class="steps">
+        <div class="step"><div><strong>Обсуждение задачи</strong><span>Выясняем, что нужно сайту, для кого он и в какие сроки должен быть готов.</span></div></div>
+        <div class="step"><div><strong>Структура и дизайн</strong><span>Согласуем, какие блоки будут на странице и как она будет выглядеть.</span></div></div>
+        <div class="step"><div><strong>Разработка</strong><span>Верстаю страницу, подключаю формы и нужные интерактивные элементы.</span></div></div>
+        <div class="step"><div><strong>Сдача</strong><span>Вношу правки по вашим замечаниям, передаю код и объясняю, как менять тексты и картинки.</span></div></div>
+      </div>
+    </section>
+
+    <section id="works">
+      <h2>Работы</h2>
+      <div class="works">
+        <div class="work"><h3>Приложение для учёта бизнеса</h3><p>Всё нужное для учёта в одном веб-приложении. HTML, CSS, JavaScript.</p><small>Ссылка скоро появится</small></div>
+        <div class="work"><h3>Лендинг</h3><p>Страница под одну задачу с формой заявки.</p><small>Проект в работе</small></div>
+        <div class="work"><h3>Сайт-визитка</h3><p>Короткий сайт о специалисте или небольшой компании.</p><small>Проект в работе</small></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Расскажите о задаче</h2>
+      <p>Напишите в Telegram, что нужно сделать и к какому сроку. Я отвечу с вопросами и оценкой.</p>
+      <a class="btn main" href="https://t.me/Gidi_i" target="_blank" rel="noopener">Написать @Gidi_i</a>
+    </section>
+  </main>
+
+  <footer>© 2026 WEBSTEP</footer>
+</div>
+</body>
+</html>
